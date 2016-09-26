@@ -1,5 +1,5 @@
 OBJS	= main.o perceptron.o
-PROGRAM = main.exe
+PROGRAM = main
 
 all:			$(PROGRAM)
 

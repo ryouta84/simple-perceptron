@@ -1,5 +1,5 @@
-#include <iostream>
 #include "perceptron.h"
+#include <iostream>
 
 using namespace std;
 
@@ -10,10 +10,18 @@ int main() {
     cout << "filename:";
     cin >> filename;
 
-    perceptron p(filename, 3, 3);
-    //double buf[] = {1, 0, 1};
-    //cout << "forward(buf) == " << p.forward(buf) << endl;
-    cin >> filename;
+    int aDataSize = 3;
+    int hiddenSize = 3;
+    perceptron p(filename, aDataSize, hiddenSize);
+
+    double input[aDataSize];
+    while(true){
+        for(int i=0; i<aDataSize; ++i){
+            cin >> input[i];
+        }
+        cout << std::endl << "forward(buf) == " << p.forward(input) << endl;
+        cout << endl;
+    }
 
     return 0;
 }
